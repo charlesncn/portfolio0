@@ -1,0 +1,396 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+*{
+    margin: 0;
+    padding:  0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    /* background-color: #000; */
+    width: 100%;
+}
+header{
+    width: 100%;
+    height: 35px;
+    background-color: crimson;
+    position: static;
+}
+header ul{
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+}
+
+header ul li{
+    list-style: none;
+}
+
+header ul li a{
+    border: 1px solid #000;
+    position: relative;
+    display: block;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    color: #262626;
+    overflow: hidden;
+    margin: 15px 3px 0 3px;
+    transition: .3s;
+    border: none;
+}
+
+header ul li a .fa{
+    transform: rotate(0);
+}
+header ul li a:before{
+    content: '';
+    position: absolute;
+    bottom: -100px;
+    left: -100px;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(36, 36, 33);
+    transition: .2s;
+}
+
+.header ul li a:hover:before{
+    top: 0;
+    bottom: 0;
+    left: 0;
+}
+header ul li a:hover{
+    color: #fff;
+}
+
+
+.mainMenu{
+    max-width: 75%;
+    margin: auto;
+    padding: 0, 80px;
+}
+.navBar{
+    position: fixed;
+    font-family: 'Ubuntu', sans-serif;
+    width: 100%;
+    margin: auto;
+    transition: all 0.3 ease-in-out;
+    z-index: 3;
+}
+
+.navBar.sticky{
+    background: crimson;
+    position: fixed;
+    margin-top: -45px;
+}
+
+.navBar .mainMenu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navBar .logo img{
+    height: 80px;
+}
+.navBar .menu li{
+    list-style: none;
+    display: inline-block;
+}
+.navBar .menu li a{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 100;
+    margin-left: 20px;
+    transition: color 0.3s ease;
+}
+
+.navBar.sticky .menu li a:hover{
+    color: #000;
+}
+.navBar .menu li a:hover{
+    color: crimson;
+}
+/* card button end */
+
+.navBar .menu_btn{
+    color: #fff;
+    font-size: 25px;
+    display: none;
+    cursor: pointer;
+}
+
+
+
+
+
+.home{
+    width: 100%;
+    height: 100vh;
+    background: url(img/dark_lap.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0 auto;
+}
+
+.parent{
+    display: flex;
+    flex-direction: column;
+}
+.home_txt{
+    width: 75%;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    transform: translate(0, 100%);
+}
+.home_txt h1{
+    color: #fff;
+    font-size: 66px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 4.5px;
+}
+.home_txt .title{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 
+    Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', 
+    sans-serif;
+    color: rgb(98, 253, 253);
+    font-size: 86px;
+    line-height: 86px;
+}
+.home_txt h4{
+    font-family: 'Poppins';
+    color: rgb(98, 253, 253);
+    font-size: 26px;
+    font-weight: normal;
+}
+
+.home_txt h4 .sub_title{
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.intro_txt{
+    width: 65%;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    transform: translate(0, 300%);
+}
+.intro_txt p{
+    font-family: Courier, monospace;
+    color: #fff;
+    font-size: 23px;
+    letter-spacing: 3px;
+}
+
+.cardHolder{
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    transform: translate(0, 20%);
+    position: absolute;
+    bottom: 10%;
+    left: 0;
+    right: 0;
+}
+
+.cardHolder .card{
+    width: 180px;
+    margin: 0;
+    border: 1px groove rgb(255, 255, 255);
+    border-radius: 4px;
+    text-align: center;
+    position: relative;
+    display: block;
+    overflow: hidden;
+    transition: .2s;
+}
+.card a{
+    text-decoration: none;
+}
+
+.card h3{
+    color: rgb(250, 7, 47);
+    font-family: 'Poppins';
+    font-size: 22px;
+    font-weight: lighter;
+}
+.card p{
+    color: #fff;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: lighter;
+    letter-spacing: 1px;
+    font-size: 14px;
+    line-height: 19px;
+}
+
+
+.card:before{
+    content: '';
+    position: absolute;
+    bottom: -100px;
+    left: -200px;
+    width: 100%;
+    height: 100%;
+    transition: .2s;
+}
+
+.card:hover:before{
+    top: 0;
+    bottom: 0;
+    left: 0;
+}
+.card:hover p, .card:hover h3{
+    color: #fff;
+    opacity: 0;
+    transition: .4 ease-in-out;
+
+}
+
+.card:nth-child(1):before{
+    background: url(img/about.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: none;
+}
+.card:nth-child(2):before{
+    background: url(img/projects.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -2;
+}
+.card:nth-child(3):before{
+    background: url(img/skills.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -2;
+}
+.card:nth-child(4):before{
+    background: url(img/contact.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -2;
+}
+
+
+
+
+
+#about{
+    width: 100%;
+    height: 100vh;
+    background-color: #262626;
+}
+
+#projects{
+    width: 100%;
+    height: 100vh;
+    background-color: #ffffff;
+}
+#testimonials{
+    width: 100%;
+    height: 100vh;
+    background-color: #64e8ff;
+}
+
+
+@keyframes zoom{
+    from{transform: scale(0)}
+    to{transform: scale(1)}
+}
+
+
+/* media query */
+
+@media (max-width: 820px){
+    .mainMenu{
+        padding: 0;
+        width: 90%;
+    }
+    .navBar .menu_btn{
+        display: block;
+        z-index: 999;
+    }
+    .navBar .menu{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: -100%;
+        background-color: rgb(48, 199, 245);
+        text-align: center;
+        padding-top: 70px;
+        transition: all 0.4s ease;
+    }
+    .navBar .menu.active{
+        left: 0;
+    }
+    
+    .navBar .menu li{
+        display: block;
+    }
+    .navBar .menu li a{
+        display: inline-block;
+        margin: 20px;
+        font-size: 25px;
+    }
+    
+    .home_txt,
+    .cardHolder{
+        width: 90%;
+    }
+}
+
+
+@media (max-width: 768px){
+    .home_txt,
+    .intro_txt{
+        width: 90%;
+        transform: translate(0, 0);
+        /* background: #64e8ff; */
+    }
+    .home_txt h1,
+    .home_txt .title{
+        font-size: 30px;
+    }
+    .intro_txt p{
+        font-size: 18px;
+    }
+    .cardHolder{
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        /* background: #64e8ff; */
+    }
+    
+    .cardHolder .card{
+        width: 85%;
+        margin: 0 auto;
+        transform: translate(0, 0);
+    }
+
+    
+    .card:hover p, .card:hover h3{
+        opacity: 1;
+    }
+    .card:nth-child(1):before,
+    .card:nth-child(2):before,
+    .card:nth-child(3):before,
+    .card:nth-child(4):before{
+        background-image: none;
+    }
+
+
+    
+}
