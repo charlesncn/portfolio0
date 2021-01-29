@@ -133,7 +133,7 @@ header ul li a:hover{
 .home{
     width: 100%;
     height: 100vh;
-    background: url(dark_lap.png);
+    background: url(img/dark_lap.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -147,9 +147,7 @@ header ul li a:hover{
 .home_txt{
     width: 75%;
     margin: auto;
-    top: 0;
     left: 0;
-    bottom: 0;
     right: 0;
     transform: translate(0, 100%);
 }
@@ -259,25 +257,25 @@ header ul li a:hover{
 }
 
 .card:nth-child(1):before{
-    background: url(about.png);
+    background: url(img/about.png);
     background-repeat: no-repeat;
     background-size: cover;
     border: none;
 }
 .card:nth-child(2):before{
-    background: url(projects.png);
+    background: url(img/projects.png);
     background-repeat: no-repeat;
     background-size: cover;
     z-index: -2;
 }
 .card:nth-child(3):before{
-    background: url(skills.png);
+    background: url(img/skills.png);
     background-repeat: no-repeat;
     background-size: cover;
     z-index: -2;
 }
 .card:nth-child(4):before{
-    background: url(contact.png);
+    background: url(img/contact.png);
     background-repeat: no-repeat;
     background-size: cover;
     z-index: -2;
@@ -357,7 +355,8 @@ header ul li a:hover{
     .home_txt,
     .intro_txt{
         width: 90%;
-        transform: translate(0, 0);
+        margin: 50px auto 0 auto;
+        transform: translate(0, 50%);
         /* background: #64e8ff; */
     }
     .home_txt h1,
